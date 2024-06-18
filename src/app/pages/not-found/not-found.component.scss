@@ -1,0 +1,37 @@
+.not-content{
+    width: 720px;
+    height: 511px;
+
+    margin-top: 24px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid #3D3D3D;
+    border-radius: 12px;
+    background-color: #0A0A0A;
+  
+    .not-container{
+      font-family: Poppins;
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 70px;
+      letter-spacing: -0.02em;
+      text-align: center;
+  
+      gap: 16px;
+  
+      .not-content-title{
+        color: #FAFAFA;
+        margin-bottom: 16px;
+      }
+      .not-content-subtitle{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: #A4A4A4;
+      }
+    }
+    
+  }
