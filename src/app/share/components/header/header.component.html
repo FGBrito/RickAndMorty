@@ -1,0 +1,21 @@
+<mat-toolbar class="theme-default" color="default">
+    <mat-toolbar-row>
+      <a [routerLink]="['/']">
+        <img src="assets/logo.png" alt="Rick and Morty"> 
+      </a>
+      <span class="example-spacer"></span>
+      <div class="example-network">
+        <div class="button-home" [ngClass]="{'ligth': rota=='/'}" [routerLink]="['/']">
+          <mat-icon aria-hidden="false" aria-label="home-icon" fontIcon="home"></mat-icon>
+          <label>Início</label>
+        </div>
+        <div class="button-favorite" [ngClass]="{'ligth': rota=='/favorite'}" [routerLink]="['/favorite']">
+          <mat-icon aria-label="favorite">favorite</mat-icon>
+          <label>Favoritos</label>
+          <div class="mat-step-icon">
+            <span>{{favoriteCount}}</span>
+          </div>
+        </div>
+      </div>      
+    </mat-toolbar-row>
+</mat-toolbar>
