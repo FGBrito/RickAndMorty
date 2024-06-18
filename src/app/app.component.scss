@@ -1,0 +1,16 @@
+.app-container{
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 100%;
+  margin-top: 56px;
+}
+
+app-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
