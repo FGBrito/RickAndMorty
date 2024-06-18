@@ -1,0 +1,7 @@
+<mat-icon 
+    aria-label="favorite" 
+    class="favorite" 
+    [ngClass]="{'notfavorite': !item.isFavorite, 'isfavorite': item.isFavorite}" 
+    (click)="toggleFavorite(item)">
+    favorite
+</mat-icon>

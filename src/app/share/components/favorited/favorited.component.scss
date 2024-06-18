@@ -1,0 +1,25 @@
+.favorite{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    right: 0;
+    border-radius: 0 24px 0 100px;
+    cursor: pointer;
+}
+
+.isfavorite{
+    background: white !important;
+    color: #000 !important;
+}
+
+.notfavorite{
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FFF;
+    backdrop-filter: blur(3px);
+}
+  
