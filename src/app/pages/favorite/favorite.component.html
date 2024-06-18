@@ -1,0 +1,37 @@
+<div class="container-favorite">
+  <div class="text-favorite">Favoritos</div>
+
+  <ng-container [ngSwitch]="data.length ? 1 : 2">
+    <ng-container *ngSwitchCase="1">
+      <div class="example-content">
+        <mat-card class="example-card" *ngFor="let item of data">
+          <img mat-card-image [src]="item.image" alt="item.name">
+          <favorited class="favorited" [item]="item"></favorited>
+          <mat-card-header class="card-header">
+            <mat-card-title class="header-title">
+              <p class="overflow-ellipsis">
+                {{item.name}}
+              </p>
+            </mat-card-title>
+            <mat-card-subtitle class="header-subtitle">
+              <div>{{item.species}}</div>
+              <div>{{item.type}}</div>
+            </mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="2">
+      <div class="not-content">
+        <div class="not-container">
+          <div class="not-content-title">
+            Parece que você ainda não tem favoritos
+          </div>
+          <div class="not-content-subtitle">
+            Volte à página inicial e escolha os melhores para você.
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
