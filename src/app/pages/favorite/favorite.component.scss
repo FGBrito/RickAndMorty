@@ -123,6 +123,9 @@
     grid-template-columns: repeat(2, 224px) !important;
     justify-content: center;
   }
+  .not-content{
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 468px) {
   .example-content{
