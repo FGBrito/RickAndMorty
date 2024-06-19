@@ -12,7 +12,7 @@
 
 <ng-container [ngSwitch]=" items.length ? 1 : 2">
   <ng-container *ngSwitchCase="1">
-    <cdk-virtual-scroll-viewport scrollWindow itemSize="20">
+    <!-- <cdk-virtual-scroll-viewport scrollWindow itemSize="20">
       <div *cdkVirtualFor="let item of items">
           <mat-card class="example-card">
             <img mat-card-image [src]="item.image" alt="item.name">
@@ -30,7 +30,26 @@
             </mat-card-header>
           </mat-card>
         </div>
-    </cdk-virtual-scroll-viewport>
+    </cdk-virtual-scroll-viewport> -->
+    <!-- <div class="example-content">
+    </div> -->
+    <div class="example-content">
+      <mat-card class="example-card" *ngFor="let item of items">
+        <img mat-card-image [src]="item.image" alt="item.name">
+        <favorited class="favorited" [item]="item"></favorited>
+        <mat-card-header class="card-header">
+          <mat-card-title class="header-title">
+            <p class="overflow-ellipsis">
+              {{item.name}}
+            </p>
+          </mat-card-title>
+          <mat-card-subtitle class="header-subtitle">
+            <div>{{item.species}}</div>
+            <div>{{item.type}}</div>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
   </ng-container>
   <ng-container *ngSwitchCase="2">
     <div class="not-content">

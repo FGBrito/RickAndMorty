@@ -131,8 +131,12 @@
   .example-content{
     display: grid !important;
     grid-gap: 10px !important;
-    grid-template-columns: repeat(1, 224px) !important;
+    grid-template-columns: repeat(1, 326px) !important;
     justify-content: center;
+    position: relative !important;
+  }
+  .example-card{
+    width: 100% !important;
   }
 }
 

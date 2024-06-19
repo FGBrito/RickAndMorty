@@ -48,7 +48,6 @@ export class PostsComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    console.log('onScroll')
     if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
       this.loadPosts(undefined,this.page);
     }
