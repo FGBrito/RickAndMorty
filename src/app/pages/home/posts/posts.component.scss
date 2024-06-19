@@ -31,60 +31,66 @@
     flex: 1 1 auto;
   }
 }
+.viewport {
+  display: grid !important;
+  grid-gap: 10px !important;
+  grid-template-columns: repeat(3, 224px) !important;
+  gap: 24px !important;
+}
 
-.example-content{
+::ng-deep .cdk-virtual-scroll-content-wrapper{
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(3, 224px);
   gap: 24px;
+  position: relative !important;
+}
+.example-card{
+  background-color: #0A0A0A;
+  border: 1px solid #3D3D3D;
+  width: 224px;
+  .favorited{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 0;
+  }
+  .card-header{
+    padding: 12px;
 
-  .example-card{
-    background-color: #0A0A0A;
-    border: 1px solid #3D3D3D;
-    width: 224px;
-    .favorited{
-      position: absolute;
-      width: 48px;
-      height: 48px;
-      right: 0;
+    .header-title{
+      font-family: Creepster;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      text-align: left;
+      
+      width: 200px;
+      margin-bottom: 5px;
+
+      .overflow-ellipsis {
+        text-overflow: ellipsis;
+      }
+    
+      p{
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+      
+        color: #FAFAFA;
+      }
+    
     }
-    .card-header{
-      padding: 12px;
 
-      .header-title{
-        font-family: Creepster;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: -0.02em;
-        text-align: left;
-        
-        width: 200px;
-        margin-bottom: 5px;
-
-        .overflow-ellipsis {
-          text-overflow: ellipsis;
-        }
-      
-        p{
-          margin: 0;
-          white-space: nowrap;
-          overflow: hidden;
-        
-          color: #FAFAFA;
-        }
-      
-      }
-
-      .header-subtitle{
-        font-family: Poppins;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22.4px;
-        text-align: left;
-      
-        color: #A4A4A4;
-      }
+    .header-subtitle{
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      text-align: left;
+    
+      color: #A4A4A4;
     }
   }
 }
@@ -173,7 +179,7 @@
 }
 
 @media only screen and (max-width: 740px) {
-  .example-content{
+  ::ng-deep  .cdk-virtual-scroll-content-wrapper {
     display: grid !important;
     grid-gap: 10px !important;
     grid-template-columns: repeat(2, 224px) !important;
@@ -182,14 +188,18 @@
 }
 
 @media only screen and (max-width: 468px) {
-  .example-content{
+  ::ng-deep  .cdk-virtual-scroll-content-wrapper{
     display: grid !important;
     grid-gap: 10px !important;
-    grid-template-columns: repeat(1, 224px) !important;
+    grid-template-columns: repeat(1, 326px) !important;
     justify-content: center;
+    position: relative !important;
+  }
+  .example-card{
+    width: 100%;
   }
   .filter-inicio{
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     margin-bottom: 72px;
   }

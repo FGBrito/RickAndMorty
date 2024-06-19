@@ -13,13 +13,16 @@ export class RickandmortyapiService {
 
   public baseUrl = environment.APIEndpoint;
 
-  public getCharacters(filters?: CharacterFilter ): Observable<RootObject> {
+  public getCharacters(filters?: CharacterFilter, pages?: string ): Observable<RootObject> {
     let options = '';
 
     if (filters) {
       if (filters.name) {
         options = `/?name=${filters.name}`;
       }
+    }
+    if (pages) {
+      options = `/?${pages}`;
     }
     return this.http.get<RootObject>(`${this.baseUrl}character${options}`);
   }

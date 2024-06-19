@@ -11,6 +11,7 @@ import { MatFormFieldModule} from '@angular/material/form-field';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     RickandmortyapiModule,
     MatCardModule,
+    ScrollingModule,
     MatInputModule,
     MatFormFieldModule,
     FavoritedModule,

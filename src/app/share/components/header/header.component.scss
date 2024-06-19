@@ -12,7 +12,6 @@
   width: 253px;
   height: 40px;
   border-radius: 12px;
-  border: 1px solid #3D3D3D;
 
   font-family: Poppins;
   font-size: 14px;
@@ -33,6 +32,7 @@
     
     border: 0px 0px 1px 0px;
     border-radius: 12px 0 0 12px;
+    border: 1px solid #3D3D3D;
     border-right: 1px solid #3D3D3D;
 
     cursor: pointer;
@@ -47,6 +47,8 @@
     gap: 8px;
     color: #A4A4A4;
     border-radius: 0 12px 12px 0;
+    
+    border: 1px solid #3D3D3D;
 
     cursor: pointer;
     label{
